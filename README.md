@@ -1,0 +1,1 @@
+# Goruntu_Sahteciligi_Tespiti
