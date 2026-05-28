@@ -1,0 +1,27 @@
+name: Doxygen Docs
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install Doxygen and Graphviz
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y doxygen graphviz texlive-latex-base
+
+    - name: Run Doxygen
+      run: doxygen Doxyfile
+
+    - name: Upload Documentation
+      uses: actions/upload-artifact@v4
+      with:
+        name: doxygen-docs
+        path: docs/
