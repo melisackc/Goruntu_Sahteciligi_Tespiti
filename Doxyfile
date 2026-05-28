@@ -32,4 +32,4 @@ DIRECTORY_GRAPH = YES
 DOT_MULTI_TARGETS = YES
 
 # Graphviz Programının Bilgisayarındaki Tam Yolu
-DOT_PATH = "C:/Users/User/Desktop/Graphviz/bin"
+# DOT_PATH = "C:/Users/User/Desktop/Graphviz/bin"
